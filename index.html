@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Simple jQuery Accordion</title>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="jquery.simple-accordion.js"></script>
+        <script>
+            $(function() {
+                $('#my-accordion').simpleAccordion();
+                $('#my-accordion2').simpleAccordion();
+            });
+        </script>
+    </head>
+    <body>
+        <dl class="accordion" id="my-accordion">
+            <dt>Section 1</dt>
+            <dd>Mauris mauris ante, blandddfdit et, ultrices a, suscipit eget, quam.</dd>
+            <dt>Section 2</dt>
+            <dd>Vestibulum a velit eu ante scelerisque vulputate.</dd>
+            <dt>Section 3</dt>
+            <dd>Nam mi. Proin viverra leo ut odio. Curabitur malesuada.</dd>
+            <dt>Section 4</dt>
+            <dd>Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc.</dd>
+        </dl>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <dl class="accordion" id="my-accordion2">
+            <dt>Section 1</dt>
+            <dd>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.</dd>
+            <dt>Section 2</dt>
+            <dd>Vestibulum a velit eu ante scelerisque vulputate.</dd>
+        </dl>
+    </body>
+</html>
