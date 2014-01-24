@@ -3,10 +3,10 @@ Simple jQuery Accordion
 
 This is a simple accordion jQuery accordion, with basic functionalities using animates.css to add transition effects.
 How to use it:
-    -Include jQuery library
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <h2>Include jQuery library</h2>
+        <p>http://code.jquery.com/jquery-1.9.1.js"</p>
     <h2>-Include the plugin</h2>
-        <script type="text/javascript" src="jquery.simple-accordion.js"></script>
+       <p> jquery.simple-accordion.js"</p>
     <h2>-Create an HTML markup for the accordion:</h2>
         You can use any tag you like as long as it follow this structure:
         <parent tag> Title </parent tag>
