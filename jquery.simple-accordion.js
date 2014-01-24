@@ -1,51 +1,20 @@
 (function($) {
     $.fn.simpleAccordion = function(options) {
-        //start options
+        //options
         var opts = $.extend(
                 {},
                 {open: false},
-        {width: '500px'},
-        {border: '1px solid #ccc'},
-        {borderBottom: 'none'},
-        {fontFamily: 'Arial, Helvetica, sans-serif'},
-        {fontSize: '12px'},
-        {inChildBorderBottom: '1px solid #ccc'},
-        {inChildMargin: '0px'},
-        {inChildBackground: '#eaeaea'},
-        {inChildFontSize: '13px'},
-        {inChildFontWeight: 'bold'},
-        {inChildPadding: '8px 4px'},
-        {inChildCurson: 'pointer'},
-        {inChildFontWeight: 'bold'},
-        {inChildPadding: '8px 4px'},
-        {in2ChildMargin: '0px'},
-        {in2ChildPadding: '12px 8px'},
-        options
-                );
-        //end options
+        {animationIn: 'fadeInLeft'},
+        {animationOut: 'fadeOutLeft'},
+        options);
 
-        //start styles
+        //styles
         $(this).css({
-            'width': opts.width,
-            'border': opts.border,
-            'border-bottom': opts.borderBottom,
-            'font-family': opts.fontFamily,
-            'font-size': opts.fontSize
-        });
-        $(this).children('dt').css({
-            'border-bottom': opts.inChildBorderBottom,
-            'margin': opts.inChildMargin,
-            'background': opts.inChildBackground,
-            'cursor': opts.inChildCurson,
-            'padding': opts.inChildPadding,
-            'font-size': opts.inChildFontSize,
-            'font-weight': opts.inChildFontWeight
-        });
-        //end styles
+            '-webkit-mask-image': 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)', /* this fixes the overflow:hidden in Chrome/Opera */
+            '-o-mask-image': 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)', /* this fixes the overflow:hidden in Chrome/Opera */
+            '-moz-mask-image': 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)', /* this fixes the overflow:hidden in Chrome/Opera */
+            'mask-image': 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)' /* this fixes the overflow:hidden in Chrome/Opera */
 
-        $(this).children('dd').css({
-            'margin': opts.in2ChildMargin,
-            'padding': opts.in2ChildPadding
         });
 
         //functionalities
@@ -58,10 +27,19 @@
         });
 
         function sa_click() {
-            $(this).parent().addClass('maskImg');
             $(this).siblings('dt').each(sa_hide);
-            $(this).next().slideDown('fast').addClass('animated fadeInLeft');
-            return false;
+
+            if ($(this).hasClass('isClose')) {
+                console.log('got it ')
+                $(this).next().slideDown('fast').removeClass(opts.animationOut).addClass('animated ' + opts.animationIn);
+                $(this).removeClass('isClose').addClass('isOpen');
+                return false;
+            } else if ($(this).hasClass('isOpen')) {
+                console.log('dont got it')
+                $(this).next().removeClass(opts.animationIn).addClass('animated ' + opts.animationOut).slideUp('slow');
+                $(this).removeClass('isOpen').addClass('isClose');
+                return false;
+            }
         }
 
         function sa_hide() {
@@ -69,9 +47,9 @@
         }
 
         function sa_reset() {
+            $(this).addClass('isClose');
             $(this).next().hide();
         }
-        //end functions
 
     }
     jQuery.fn.simpleAccordion.defaults = {
