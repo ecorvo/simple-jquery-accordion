@@ -3,6 +3,7 @@ Simple jQuery Accordion
 
 This is a simple accordion jQuery accordion, with basic functionalities using animates.css to add transition effects.
 How to use it:
+<div>
     <h2>1-Include jQuery library</h2>
         <p>http://code.jquery.com/jquery-1.9.1.js</p>
     <h2>2-Include the plugin</h2>
@@ -13,5 +14,4 @@ How to use it:
        <p> $('#my-accordion').simpleAccordion();</p>
     <h2>5-You may pass attributes for the in and out transition like this:</h2>
         <p>$('#my-accordion').simpleAccordion({animationIn: 'slideInDown', animationOut: 'slideOutUp'});</p>
-
-       <h5> Enjoy!</h5>
+</div>
