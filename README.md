@@ -13,20 +13,20 @@ How to use it:
         <child tag> content here </child tag>
         Example:
         <code>
-        <dl class="accordion" id="my-accordion">
-                <dt>Section 1</dt>
-                <dd>Mauris mauris ante, blffandddfdit et, ultrices a, suscipit eget, quam.</dd>
-                <dt>Section 2</dt>
-                <dd>Vestibulum a velit eu ante scelerisque vulputate.</dd>
-                <dt>Section 3</dt>
-                <dd>Nam mi. Proin viverra leo ut odio. Curabitur malesuada.</dd>
-                <dt>Section 4</dt>
-                <dd>Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc.</dd>
-        </dl>
+        &ltdl class="accordion" id="my-accordion"&gt
+                &ltdt>Section 1</dt&gt
+                &ltdd>Mauris mauris ante, blffandddfdit et, ultrices a, suscipit eget, quam.</dd&gt
+                &ltdt>Section 2</dt&gt
+                &ltdd>Vestibulum a velit eu ante scelerisque vulputate.</dd&gt
+                &ltdt>Section 3</dt>
+                &ltdd>Nam mi. Proin viverra leo ut odio. Curabitur malesuada.</dd&gt
+                &ltdt>Section 4</dt&gt
+                &ltdd>Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc.</dd&gt
+       &ltdl&gt
         </code>
     <h2>-To initiate the plugin simple call it like this:</h2>
-        $('#my-accordion').simpleAccordion();
+       <p> $('#my-accordion').simpleAccordion();</p>
     <h2>-You may pass attributes for the in and out transition like this:</h2>
-        $('#my-accordion').simpleAccordion({animationIn: 'slideInDown', animationOut: 'slideOutUp'});
+        <p>$('#my-accordion').simpleAccordion({animationIn: 'slideInDown', animationOut: 'slideOutUp'});</p>
 
         Enjoy!
