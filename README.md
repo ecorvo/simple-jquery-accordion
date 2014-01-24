@@ -9,10 +9,9 @@ How to use it:
        <p> jquery.simple-accordion.js</p>
     <h2>3-Create an HTML markup for the accordion:</h2>
         <p>You can use any tag you like as long as it follow this structure:</p>
-
     <h2>4-To initiate the plugin simple call it like this:</h2>
        <p> $('#my-accordion').simpleAccordion();</p>
     <h2>5-You may pass attributes for the in and out transition like this:</h2>
         <p>$('#my-accordion').simpleAccordion({animationIn: 'slideInDown', animationOut: 'slideOutUp'});</p>
 
-        Enjoy!
+       <h5> Enjoy!</h5>
