@@ -8,7 +8,7 @@ How to use it:
     <h2>2-Include the plugin</h2>
        <p> jquery.simple-accordion.js</p>
     <h2>3-Create an HTML markup for the accordion:</h2>
-        You can use any tag you like as long as it follow this structure:
+        <p>You can use any tag you like as long as it follow this structure:</p>
 
     <h2>4-To initiate the plugin simple call it like this:</h2>
        <p> $('#my-accordion').simpleAccordion();</p>
