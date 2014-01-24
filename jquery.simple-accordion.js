@@ -52,11 +52,4 @@
         }
 
     }
-    jQuery.fn.simpleAccordion.defaults = {
-        width: '500px',
-        border: '1px solid #ccc',
-        borderBottom: 'none',
-        fontFamily: 'Arial, Helvetica, sans-serif',
-        fontSize: '12px',
-    };
 })(jQuery);
